@@ -1,0 +1,63 @@
+.btn {
+    /* border: none; */
+    border-radius: 10px;
+}
+
+.btn_left {
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn_edit {
+    border: none;
+
+    background-color: var(--color_pink);
+    width: 300px;
+    height: 50px;
+    font-size: 2rem;
+    color: var(--color_navy);
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.btn_edit:hover {
+    background-color: var(--color_mint);
+    color: #fff;
+}
+
+.btn_project {
+    border: solid 1px #fff;
+    background-color: var(--color_green);
+}
+
+.btn_project:hover {
+    background-color: var(--color_lightgreen);
+    color: #fff;
+}
+
+.btn_contact {
+    background-color: var(--color_yellow);
+    border: solid 1px #fff;
+}
+
+.btn_contact:hover {
+    background-color: var(--color_lightyellow);
+    color: var(--color_navy)
+}
+
+.btn_add {
+    background-color: var(--color_orange);
+    color: #fff;
+}
+
+.btn_add_file {
+    border: none;
+    background-color: var(--color_orange);
+    color: #fff;
+}
+
+.active {
+    border-bottom: solid var(--color_navy) 3px;
+}

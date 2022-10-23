@@ -1,0 +1,51 @@
+#main-header {
+    background: linear-gradient(to bottom, rgba(252, 153, 124, 0.15), rgba(250, 81, 30, 0.15));
+    height: 6rem;
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+#main-header a {
+    background-color: var(--color_navy);
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#main-header a:hover {
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}
+
+#main-header a:not(:hover) {
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: 0.5s ease-in-out;
+    transform: scale(1.0);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#main-header .navbar .icon_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 2%;
+    color: var(--color_navy);
+    margin: 10px;
+}
+
+#main-header .navbar .icon_content .content_text {
+    font-size: 3rem;
+    margin-left: 10px;
+    color: var(--color_orange);
+}

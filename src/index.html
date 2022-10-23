@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/constant_value.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <title>User Profile</title>
+</head>
+<body>
+
+    <div class="container">
+        <div id="main-header">
+            <div class="navbar">
+                <div class="icon_content">
+                    <i class="fa-regular fa-user fa-3x"></i>
+                    <div class="content_text">
+                        Profile
+                    </div>
+                </div>
+                <a href="index.html">Home</a>
+            </div>
+        </div>
+        <div id="main">
+            <div class="main_left">
+                <div class="links">
+                    <button class="btn btn_left btn_project active">Projects</button>
+                    <button class="btn btn_left btn_add">Add Project <i class="fa-solid fa-plus"></i></button>
+                    <button class="btn btn_left btn_contact">Contact</button>
+                </div>
+                <div class="project_container">
+                    
+                </div>
+                <div class="contact_container">
+                    <div class="tel_number">
+                        Telephone Number: 0505 444 88 99
+                    </div>
+                    <div class="mail">
+                        Mail: pak123ankara@gmail.com
+                    </div>
+                    <div class="message">
+                        <input type="text" placeholder="Type the message">
+                        <button class="btn btn_left btn_submit">Submit</button>
+                    </div>
+
+                </div>
+                <div class="add_project">
+                    <div class="downIcon">
+                        <i class="fa-solid fa-angles-down fa-3x"></i>
+                    </div>
+                    <div class="project_input project_name">
+                        Project Name: <input type="text">
+                    </div>
+                    <div class="project_input project_app">
+                        Application Name: <input type="text">
+                    </div>
+                    <div class="project_input project_language">
+                        Programming Language: <input type="text">
+                    </div>
+                    <div class="project_input project_link">
+                        File's Link: <input type="text">
+                    </div>
+                    <button class="btn btn_left btn_add_file">Add File</button>
+                    
+                </div>
+            </div>
+            <div class="main_right">
+                <img src="../img/profileimg.png" alt="">
+                <button class="btn btn_edit"><i class="fa-solid fa-gear"></i> Edit your profile</button>
+                <div class="userInfo">
+                    <div class="name">
+                        Yunus Emre PAK
+                    </div>
+                    <div class="features">
+                        <ul>
+                            <li><i class="fa-solid fa-xmark"></i> Front End Developer</li>
+                            <li><i class="fa-solid fa-xmark"></i> Back End Developer</li>
+                        </ul>
+                        <div class="location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Ankara, Turkey
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <i class="fa-regular fa-copyright"></i> Yunus Emre PAK 2022
+        </div>
+    </div>
+    
+    <script src="file.js"></script>
+    <script src="fileinfo.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
