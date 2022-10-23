@@ -50,6 +50,7 @@
 .btn_add {
     background-color: var(--color_orange);
     color: #fff;
+    border: solid 0.5px #fff;
 }
 
 .btn_add_file {

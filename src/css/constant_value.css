@@ -34,6 +34,7 @@ body {
 a {
     color: var(--color_blue);
     text-decoration: none;
+    cursor: pointer;
 }
 
 ul {

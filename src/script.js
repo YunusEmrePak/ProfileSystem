@@ -9,13 +9,17 @@ const project_name = document.querySelector(".project_name input");
 const project_app = document.querySelector(".project_app input");
 const project_language = document.querySelector(".project_language input");
 const project_link = document.querySelector(".project_link input");
-
-
-
+const message_input = document.querySelector(".message input");
+const dropdown_content = document.querySelector(".dropdown-content");
+const submitButton = document.querySelector(".btn_submit");
+const noText = document.querySelector(".noText");
+const message_counter = document.querySelector(".counter");
 
 const info = new FileInfo(fileList);
 
 var i;
+
+var counter = 0;
 
 window.addEventListener("load", () => {
     for (i = 0; i < info.control(); i++) {
@@ -83,6 +87,15 @@ addDiv = (files) => {
     const project_name = document.querySelector(".project a");
 }
 
+addMessage = () => {
+    var a = document.createElement('a');
+    a.innerHTML= `${message_input.value}`
+    dropdown_content.appendChild(a);
+    message_input.value = '';
+    counter++;
+    message_counter.innerHTML = `${counter}`;
+}
+
 addFileToArray = () => {
     var x = new File(`${project_name.value}`, `${project_app.value}`, `${project_language.value}`);
     fileList.push(x);
@@ -93,6 +106,10 @@ addFileToArray = () => {
     project_app.value = '';
     project_language.value = '';
     project_link.value = '';
+    noText.style.visibility = "hidden";
 }
 
 addFileButton.addEventListener("click", addFileToArray);
+
+submitButton.addEventListener("click", addMessage);
+

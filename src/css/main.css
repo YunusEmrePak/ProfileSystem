@@ -84,21 +84,6 @@
     color: var(--color_navy);
 }
 
-.project1 i {
-    color: red;
-    margin-right: 5px;
-}
-
-.project2 i {
-    color: yellow;
-    margin-right: 5px;
-}
-
-.project3 i {
-    color: orange;
-    margin-right: 5px;
-}
-
 .contact_container {
     visibility: hidden;
     position: absolute;
@@ -172,5 +157,9 @@
 .project_name input {
     height: 20px;
     margin-left: 20px;
+}
+
+.noText {
+    position: absolute;
 }
 
