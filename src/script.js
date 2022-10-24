@@ -12,7 +12,6 @@ const project_link = document.querySelector(".project_link input");
 const message_input = document.querySelector(".message input");
 const dropdown_content = document.querySelector(".dropdown-content");
 const submitButton = document.querySelector(".btn_submit");
-const noText = document.querySelector(".noText");
 const message_counter = document.querySelector(".counter");
 const btn_remove_project = document.querySelector(".btn_remove_project");
 const project_count = document.querySelector(".counter_project");
@@ -123,19 +122,21 @@ addMessage = () => {
 }
 
 addFileToArray = () => {
-    var x = new File(`${project_name.value}`, `${project_app.value}`, `${project_language.value}`);
-    fileList.push(x);
+    if (project_name.value != '' && project_app.value != '' && project_language.value != '' && project_link.value != '') {
+        var x = new File(`${project_name.value}`, `${project_app.value}`, `${project_language.value}`);
+        fileList.push(x);
 
-    info.next();
-    let files = info.getInfo();
-    addDiv(files);
-    project_count.innerHTML = `${counter_project}`;
+        info.next();
+        let files = info.getInfo();
+        addDiv(files);
+        project_count.innerHTML = `${counter_project}`;
 
-    project_name.value = '';
-    project_app.value = '';
-    project_language.value = '';
-    project_link.value = '';
-    noText.style.visibility = "hidden";
+        project_name.value = '';
+        project_app.value = '';
+        project_language.value = '';
+        project_link.value = '';
+    }
+    
 }
 
 addFileButton.addEventListener("click", addFileToArray);
