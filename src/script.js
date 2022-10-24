@@ -15,6 +15,7 @@ const submitButton = document.querySelector(".btn_submit");
 const noText = document.querySelector(".noText");
 const message_counter = document.querySelector(".counter");
 
+
 const info = new FileInfo(fileList);
 
 var i;
@@ -84,24 +85,41 @@ addDiv = (files) => {
 
     `
     document.querySelector(".project_container").appendChild(div);
-    const project_name = document.querySelector(".project a");
 }
 
 addMessage = () => {
-    var a = document.createElement('a');
-    a.innerHTML= `${message_input.value}`
-    dropdown_content.appendChild(a);
-    message_input.value = '';
-    counter++;
-    message_counter.innerHTML = `${counter}`;
+    if (message_input.value != '') {
+        var a = document.createElement('a');
+        a.id = `link link${counter + 1}`
+        a.className = `a${counter + 1}`;
+
+        var btn = document.createElement("button");
+        btn.className = `link link${counter + 1}`;
+
+        a.innerHTML= `${message_input.value}`;
+        dropdown_content.appendChild(a);
+        a.appendChild(btn);
+
+        message_input.value = '';
+        counter++;
+        message_counter.innerHTML = `${counter}`;
+        btn.addEventListener("click", () => {
+            btn.parentElement.remove();
+            counter--;
+            message_counter.innerHTML = `${counter}`;
+    });
+    }
+    
 }
 
 addFileToArray = () => {
     var x = new File(`${project_name.value}`, `${project_app.value}`, `${project_language.value}`);
     fileList.push(x);
+
     info.next();
     let files = info.getInfo();
     addDiv(files);
+
     project_name.value = '';
     project_app.value = '';
     project_language.value = '';
@@ -112,4 +130,9 @@ addFileToArray = () => {
 addFileButton.addEventListener("click", addFileToArray);
 
 submitButton.addEventListener("click", addMessage);
+
+
+
+
+
 

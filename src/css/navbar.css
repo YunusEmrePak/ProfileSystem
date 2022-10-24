@@ -69,6 +69,12 @@
     display: block;
 }
 
+.dropdown:hover a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .dropdown:hover .dropbtn {
     background-color: var(--color_navy);
 }

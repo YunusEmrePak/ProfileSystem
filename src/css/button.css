@@ -62,3 +62,19 @@
 .active {
     border-bottom: solid var(--color_navy) 3px;
 }
+
+.link {
+    width: 20px;
+    height: 8px;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+}
+
+.link:hover {
+    width: 20px;
+    height: 8px;
+    background-color: var(--color_orange);
+    border: none;
+    cursor: pointer;
+}
