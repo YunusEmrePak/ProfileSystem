@@ -14,13 +14,15 @@ const dropdown_content = document.querySelector(".dropdown-content");
 const submitButton = document.querySelector(".btn_submit");
 const noText = document.querySelector(".noText");
 const message_counter = document.querySelector(".counter");
-
+const btn_remove_project = document.querySelector(".btn_remove_project");
+const project_count = document.querySelector(".counter_project");
 
 const info = new FileInfo(fileList);
 
 var i;
 
 var counter = 0;
+var counter_project = 0;
 
 window.addEventListener("load", () => {
     for (i = 0; i < info.control(); i++) {
@@ -38,7 +40,6 @@ projectAreaVisibility = () => {
     projectButton.classList.add("active");
     addButton.classList.remove("active");
     contactButton.classList.remove("active");
-  
 }
 
 projectButton.addEventListener("click", projectAreaVisibility);
@@ -82,9 +83,21 @@ addDiv = (files) => {
         <div class="icon">
             <i class="fa-solid fa-circle"></i> ${files.language}
         </div>
-
-    `
+        `
+    counter_project++;
     document.querySelector(".project_container").appendChild(div);
+    var btn_remove = document.createElement('button');
+    btn_remove.className = `btn_remove_project btn_remove_project${info.index + 1}`;
+    btn_remove.innerHTML = "Delete";
+    document.querySelector(`.project${info.index + 1}`).appendChild(btn_remove);
+    btn_remove.addEventListener("click", () => {
+        btn_remove.parentElement.remove();
+        counter_project--;
+        project_count.innerHTML = `${counter_project}`;
+    });
+            
+    
+    
 }
 
 addMessage = () => {
@@ -119,6 +132,7 @@ addFileToArray = () => {
     info.next();
     let files = info.getInfo();
     addDiv(files);
+    project_count.innerHTML = `${counter_project}`;
 
     project_name.value = '';
     project_app.value = '';

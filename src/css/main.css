@@ -78,10 +78,29 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 50px;
+    position: relative;
+}
+
+.btn_remove_project {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--color_navy);
+    color: #fff;
+    width: 50px;
+    height: 20px;
 }
 
 .project a {
     color: var(--color_navy);
+}
+
+.btn_project {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .contact_container {
