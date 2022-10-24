@@ -94,10 +94,7 @@ addDiv = (files) => {
         btn_remove.parentElement.remove();
         counter_project--;
         project_count.innerHTML = `${counter_project}`;
-    });
-            
-    
-    
+    });   
 }
 
 addMessage = () => {
